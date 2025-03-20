@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navigation */
+header {
+    background-color: #000;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    margin-left: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #333;
+}
+
+.menu a.active {
+    background-color: #555;
+}
+
+/* Page Content Styles */
+.page-content {
+    padding: 40px 0;
+    min-height: calc(100vh - 140px);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Home Page Styles */
+.hero {
+    background-color: #000;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-form input {
+    flex: 1;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+.search-form button {
+    padding: 12px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.feature-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.feature-card {
+    width: 30%;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+.feature-card h3 {
+    margin: 15px 0;
+    color: #000;
+}
+
+/* Clubs Page Styles */
+.filter-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.filter-form input,
+.filter-form select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.filter-form button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.club-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.club-card:hover {
+    transform: translateY(-5px);
+}
+
+.club-info {
+    padding: 20px;
+}
+
+.club-info h3 {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.club-category {
+    display: inline-block;
+    background-color: #f0e6ff; /* Pastel Purple */
+    color: #6b46c1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Events Page Styles */
+.calendar {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.calendar-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.calendar-controls button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.calendar-grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-grid th,
+.calendar-grid td {
+    border: 1px solid #eee;
+    text-align: center;
+    padding: 15px;
+}
+
+.calendar-grid th {
+    background-color: #f9f9f9;
+    font-weight: 600;
+}
+
+.event-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd6e7; /* Pastel Pink */
+    border-radius: 50%;
+    margin-top: 5px;
+}
+
+.upcoming-events {
+    margin-top: 40px;
+}
+
+.event-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+}
+
+.event-date {
+    min-width: 80px;
+    height: 80px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.event-date .month {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.event-date .day {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event-details h3 {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.event-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Contact Page Styles */
+.contact-container {
+    display: flex;
+    gap: 40px;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    padding: 12px 25px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.info-card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.info-card h3 {
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.info-item {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.info-item-label {
+    min-width: 100px;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 20px 0;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Pastel Color Accents */
+.pastel-pink {
+    background-color: #ffd6e7 !important;
+    color: #d53f8c !important;
+}
+
+.pastel-blue {
+    background-color: #e6f7ff !important;
+    color: #0070f3 !important;
+}
+
+.pastel-green {
+    background-color: #e6fffa !important;
+    color: #2c7a7b !important;
+}
+
+.pastel-yellow {
+    background-color: #fffde7 !important;
+    color: #b7791f !important;
+}
+
+/* Tab System for Single Page */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-button {
+    padding: 12px 25px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.tab-button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.tab-button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.tab-button.active {
+    background-color: #000;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feature-card {
+        width: 100%;
+    }
+    
+    .contact-container {
+        flex-direction: column;
+    }
+    
+    .filter-form {
+        flex-direction: column;
+    }
+    
+    .feature-section {
+        flex-direction: column;
+    }
+    
+    .tab-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
